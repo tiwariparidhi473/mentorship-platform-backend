@@ -1,5 +1,5 @@
 const express = require('express');
-const User = require('../models/User');
+const User = require('../models/user');
 const auth = require('../middleware/auth');
 const { Op } = require('sequelize');
 
@@ -11,7 +11,7 @@ router.get('/me', auth, async (req, res) => {
     const user = await User.findByPk(req.user.id, {
       attributes: { exclude: ['password'] }
     });
-    if (!user) return res.status(404).json({ message: 'User not found' });
+    if (!user) return res.status(404).json({ message: 'user not found' });
     res.json(user);
   } catch (err) {
     res.status(500).json({ message: 'Server error', error: err.message });
@@ -23,7 +23,7 @@ router.put('/me', auth, async (req, res) => {
   try {
     const { name, skills, department, availability, bio } = req.body;
     const user = await User.findByPk(req.user.id);
-    if (!user) return res.status(404).json({ message: 'User not found' });
+    if (!user) return res.status(404).json({ message: 'user not found' });
 
     user.name = name || user.name;
     user.skills = skills || user.skills;
@@ -51,7 +51,7 @@ router.get('/mentors', async (req, res) => {
       where.department = department;
     }
 
-    const mentors = await User.findAll({
+    const mentors = await ser.findAll({
       where,
       attributes: { exclude: ['password'] }
     });
