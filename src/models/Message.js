@@ -1,7 +1,7 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('./index');
 const User = require('./user');
-const MentorshipRequest = require('./mentorshipRequest');
+const MentorshipRequest = require('./MentorshipRequest');
 
 const Message = sequelize.define('Message', {
   id: {
@@ -24,7 +24,7 @@ const Message = sequelize.define('Message', {
     allowNull: false,
   }
 }, {
-  timestamps: true,
+  timestamps: true
 });
 
 module.exports = Message;
