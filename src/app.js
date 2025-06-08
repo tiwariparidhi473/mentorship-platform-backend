@@ -38,7 +38,7 @@ sequelize.authenticate()
   .catch(err => console.error('Unable to connect to the database:', err));
 
 // Sync Sequelize models
-const User = require('./models/User');
+const User = require('./models/user');
 const MentorshipRequest = require('./models/MentorshipRequest');
 const Message = require('./models/Message');
 sequelize.sync();
