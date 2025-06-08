@@ -1,6 +1,6 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('./index');
-const User = require('./User');
+const User = require('./user');
 
 const MentorshipRequest = sequelize.define('MentorshipRequest', {
   id: {
