@@ -39,8 +39,8 @@ sequelize.authenticate()
 
 // Sync Sequelize models
 const User = require('./models/User');
-const MentorshipRequest = require('./models/MentorshipRequest');
-const Message = require('./models/Message');
+const MentorshipRequest = require('./models/mentorshipRequest');
+const Message = require('./models/message');
 sequelize.sync();
 
 const PORT = process.env.PORT || 3000;

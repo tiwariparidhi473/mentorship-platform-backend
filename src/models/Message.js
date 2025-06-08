@@ -1,7 +1,7 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('./index');
 const User = require('./User');
-const MentorshipRequest = require('./MentorshipRequest');
+const MentorshipRequest = require('./mentorshipRequest');
 
 const Message = sequelize.define('Message', {
   id: {
