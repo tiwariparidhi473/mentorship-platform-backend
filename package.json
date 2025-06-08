@@ -1,9 +1,9 @@
 {
-  "name": "backend",
-  "version": "1.0.0",
-  "main": "index.js",
+   "name": "mentorship-platform-backend",
+     "version": "1.0.0",
+  
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+     "start": "node src/app.js"
   },
   "keywords": [],
   "author": "",
